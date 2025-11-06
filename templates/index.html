@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线留言板</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>在线留言板</h1>
+        </header>
+        
+        <main>
+            <div class="message-section">
+                <h2>留下您的留言</h2>
+                <form id="messageForm">
+                    <textarea id="messageContent" placeholder="请输入您的留言..." rows="5" required></textarea>
+                    <div class="form-actions">
+                        <button type="submit" id="submitBtn">提交留言</button>
+                        <button type="button" id="editBtn" style="display: none;">保存修改</button>
+                        <button type="button" id="cancelBtn" style="display: none;">取消修改</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="message-display" id="messageDisplay" style="display: none;">
+                <div class="message-card user-message">
+                    <div class="message-header">
+                        <span class="message-sender">我</span>
+                        <span class="message-time" id="userMessageTime"></span>
+                    </div>
+                    <div class="message-content" id="userMessageContent"></div>
+                </div>
+                
+                <div id="repliesContainer"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2024 在线留言板</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

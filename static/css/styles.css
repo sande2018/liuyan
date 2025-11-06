@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message-section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-section h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+#messageForm textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: vertical;
+    min-height: 120px;
+    margin-bottom: 15px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submitBtn, #editBtn {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#submitBtn:hover, #editBtn:hover {
+    background-color: #2980b9;
+}
+
+#cancelBtn {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+#cancelBtn:hover {
+    background-color: #c0392b;
+}
+
+.message-display {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-card {
+    margin-bottom: 20px;
+    padding: 18px;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.user-message {
+    background-color: #e3f2fd;
+    margin-left: 50px;
+    border-left: 4px solid #2196f3;
+}
+
+.admin-message {
+    background-color: #f3e5f5;
+    margin-right: 50px;
+    border-left: 4px solid #9c27b0;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.message-sender {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.message-time {
+    color: #7f8c8d;
+    font-size: 12px;
+}
+
+.message-content {
+    font-size: 16px;
+    color: #34495e;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .message-section, .message-display {
+        padding: 15px;
+    }
+    
+    .user-message {
+        margin-left: 20px;
+    }
+    
+    .admin-message {
+        margin-right: 20px;
+    }
+    
+    .form-actions {
+        justify-content: stretch;
+    }
+    
+    button {
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    .message-section h2 {
+        font-size: 1.2em;
+    }
+    
+    #messageForm textarea {
+        font-size: 14px;
+    }
+    
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .message-card {
+        padding: 12px;
+    }
+    
+    .message-content {
+        font-size: 14px;
+    }
+}
